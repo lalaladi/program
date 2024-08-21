@@ -1,0 +1,250 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Moderustic:wght@400&family=Playfair+Display:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9f1e8;
+  font-family: "Moderustic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}*/
+
+section.border-skin {
+  padding-block: min(20vh, 3.5rem);
+  width: calc(min(70rem, 90%));
+  margin-inline: auto;
+  color: #111;
+}
+section.border-skin h2 {
+  letter-spacing: 0.025em;
+  font-size: 2.6rem;
+  line-height: 1.1;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+@media screen and (min-width: 53rem) {
+  section.border-skin h2 {
+    font-size: 3.2rem;
+  }
+}
+section.border-skin p {
+  font-size: 1.1rem;
+  color: #696969;
+  margin-top: 0.8em;
+  margin-left: 0.3em;
+}
+section.border-skin a {
+  display: inline-block;
+  text-decoration: none;
+}
+section.border-skin .container {
+  margin-top: 4em;
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 40rem) {
+  section.border-skin .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+section.border-skin .container .card-skin {
+  padding: 0.625rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+section.border-skin .container .card-skin a {
+  width: 100%;
+  height: 100%;
+}
+section.border-skin .container .two-span-card {
+  grid-column: span 2;
+}
+@media screen and (max-width: 635px) {
+  section.border-skin .container .two-span-card {
+    grid-column: span 1;
+  }
+}
+@media screen and (min-width: 53rem) {
+  section.border-skin .container .card-skin {
+    border-radius: 2rem;
+  }
+}
+section.border-skin .container .card-skin:nth-child(1) .box .icon .iconBox {
+  background: #d3b19a;
+}
+section.border-skin .container .card-skin:nth-child(2) .box .icon .iconBox {
+  background: #70b3b1;
+}
+section.border-skin .container .card-skin:nth-child(3) .box .icon .iconBox {
+  background: #d05fa2;
+}
+section.border-skin .container .card-inner {
+  position: relative;
+  width: inherit;
+  height: 12rem;
+  background: var(--clr);
+  box-shadow: -2px -1px 20px -8px rgba(114, 4, 207, 0.46);
+  border-bottom-right-radius: 0;
+  transition: transform 0.1s ease;
+  transform-origin: center;
+}
+
+section.border-skin .container .card-inner .box {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+section.border-skin .container .card-inner .box .imgBox {
+  position: absolute;
+  inset: 0;
+}
+section.border-skin .container .card-inner .box .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 53rem) {
+  section.border-skin .container .card-inner .box .imgBox img {
+    border-radius: 1.6rem;
+  }
+}
+section.border-skin .container .card-inner .box .icon {
+  position: absolute;
+  bottom: -0.375rem;
+  right: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  pointer-events: none;
+}
+@media screen and (min-width: 53rem) {
+  section.border-skin .container .card-inner .box .icon {
+    width: 18rem;
+    border-top-left-radius: 1rem;
+    right: -0.375rem;
+  }
+  section.border-skin .container .card-inner .box .icon::before {
+    position: absolute;
+    content: "";
+    bottom: 0.375rem;
+    left: -1.25rem;
+    background: transparent;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+  }
+  section.border-skin .container .card-inner .box .icon::after {
+    position: absolute;
+    content: "";
+    top: -1.25rem;
+    right: 0.375rem;
+    background: transparent;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem var(--clr);
+  }
+}
+section.border-skin .container .card-inner .box .icon:hover .iconBox {
+  transform: scale(1.1);
+}
+section.border-skin .container .card-inner .box .icon h3 {
+  margin-left: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #c8c8c8;
+  font-weight: 400;
+}
+@media screen and (min-width: 53rem) {
+  section.border-skin .container .card-inner .box .icon h3 {
+    margin-left: 1em;
+  }
+}
+section.border-skin .container .card-inner .box .icon .iconBox {
+  position: absolute;
+  inset: 0.625rem;
+  background: #282828;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+section.border-skin .container .card-inner .box .icon .iconBox span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+section.border-skin .container .card-inner .box .icon input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+section.border-skin .container .card-inner .box .icon .checkmark {
+  position: absolute;
+  top: 0.938rem;
+  right: 1.25rem;
+  height: 1.063rem;
+  width: 1.063rem;
+  background-color: transparent;
+  border: 0.063rem solid #c8c8c8;
+  border-radius: 0.438rem;
+}
+section.border-skin .container .card-inner .box .icon .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.375rem;
+  top: 0.188rem;
+  width: 0.188rem;
+  height: 0.438rem;
+  border: solid white;
+  border-width: 0 0.125rem 0.125rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+section.border-skin
+  .container
+  .card-inner
+  .box
+  .icon
+  input:checked
+  ~ .checkmark {
+  background-color: #111;
+}
+section.border-skin
+  .container
+  .card-inner
+  .box
+  .icon
+  input:checked
+  ~ .checkmark:after {
+  display: block;
+}
+
+.card-skin.active h3 {
+  color: #111 !important;
+}
+.card-skin.active .checkmark {
+  border: 0.063rem solid #111;
+}
